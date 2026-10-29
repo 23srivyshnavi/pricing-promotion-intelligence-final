@@ -1,0 +1,5 @@
+def sku_id(number): return f"SKU-{number:06d}"
+def cost_id(sku, year_month): return f"COST-{sku}-{year_month}"
+def price_id(sku, date_yyyymmdd): return f"PRC-{sku}-{date_yyyymmdd}"
+def promotion_id(number, year=2026): return f"PROMO-{year}-{number:06d}"
+def decision_id(number, year=2026): return f"DEC-{year}-{number:06d}"

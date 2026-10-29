@@ -1,0 +1,27 @@
+[
+  {
+    "case_id": "EDGE-000001",
+    "issue_type": "PRICE_BELOW_FLOOR",
+    "expected_status": "REJECTED"
+  },
+  {
+    "case_id": "EDGE-000002",
+    "issue_type": "PROMOTION_STACK_VIOLATION",
+    "expected_status": "REJECTED"
+  },
+  {
+    "case_id": "EDGE-000003",
+    "issue_type": "STALE_COMPETITOR_OBSERVATION",
+    "expected_status": "REVIEW_REQUIRED"
+  },
+  {
+    "case_id": "EDGE-000004",
+    "issue_type": "MARGIN_AFTER_DISCOUNT_VIOLATION",
+    "expected_status": "REJECTED"
+  },
+  {
+    "case_id": "EDGE-000005",
+    "issue_type": "MISSING_PRICE_CHANGE_REASON",
+    "expected_status": "REJECTED"
+  }
+]

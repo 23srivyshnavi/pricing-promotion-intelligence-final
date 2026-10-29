@@ -1,0 +1,38 @@
+{
+  "reproducible": true,
+  "files_compared": 15,
+  "checksums_first": {
+    "audit_events.csv": "6044807c59ef506d08cb53b982b93cc0fcf82fc80da74aeaf6c0e3dcb6d4bb16",
+    "competitor_observations.csv": "c72b2c9a2d729c33dd61961277133605fc4d682b0c82a43a65a0c735e79ccfaf",
+    "cost_records.csv": "5336d70c54e64951c71dfe1710a48a6dfa80c277b6f9ebfe6c15a38a738822f2",
+    "edge_case_inputs.csv": "1a4d00023f52c7f68c7cba623ef2c079e5b22359d46f8ad6b6fde2bb52206438",
+    "ground_truth.json": "11e6c8c72d76c01f6d82427ba2a12bba87590498e6f09d86fa1894fde15ee9fa",
+    "inventory_snapshots.csv": "ee38a660dd451ac25cb4c237935bcfbb16317b614ae59eb8c200a367142be7dd",
+    "orders.csv": "2d5a15ffe5be00c552afcff9ce27261a35f85ec0a1f40a32083e193ae782273b",
+    "price_decisions.csv": "399d6c5700b2e55519aa3c5e568e78773f9f7fbe8b5b97cce4931bf59adec2c7",
+    "price_history.csv": "671a127858a78e7b5185003b75c030cb8a003b1a8310289d491a78bf697ae0db",
+    "products.csv": "007c4d397408e02ac0556e40e440c000ffb1002d62afdca5ac9eae6e3d0d3606",
+    "promotion_applications.csv": "c671de23482ced4c9a2133e83d0c0e33b4f4389f51a9612df611ba89078e2160",
+    "promotion_products.csv": "e980c0c0233044c39f93f48930abc93ed0af1f03a68b2bb8de0b62fc826bbc9f",
+    "promotion_rules.csv": "ce93fa01794493b352cf9151af45065e1e57940296c33534325b7412e8d8903b",
+    "promotions.csv": "266b35774e456a796a4a63053658747d6060ceeeeb8b891082294327f1dc6b7a",
+    "run_manifest.json": "84392dd5e3478bd954e2c71452fa09fc3b2a4b70349a3b9a51bb6f19337144f6"
+  },
+  "checksums_second": {
+    "audit_events.csv": "6044807c59ef506d08cb53b982b93cc0fcf82fc80da74aeaf6c0e3dcb6d4bb16",
+    "competitor_observations.csv": "c72b2c9a2d729c33dd61961277133605fc4d682b0c82a43a65a0c735e79ccfaf",
+    "cost_records.csv": "5336d70c54e64951c71dfe1710a48a6dfa80c277b6f9ebfe6c15a38a738822f2",
+    "edge_case_inputs.csv": "1a4d00023f52c7f68c7cba623ef2c079e5b22359d46f8ad6b6fde2bb52206438",
+    "ground_truth.json": "11e6c8c72d76c01f6d82427ba2a12bba87590498e6f09d86fa1894fde15ee9fa",
+    "inventory_snapshots.csv": "ee38a660dd451ac25cb4c237935bcfbb16317b614ae59eb8c200a367142be7dd",
+    "orders.csv": "2d5a15ffe5be00c552afcff9ce27261a35f85ec0a1f40a32083e193ae782273b",
+    "price_decisions.csv": "399d6c5700b2e55519aa3c5e568e78773f9f7fbe8b5b97cce4931bf59adec2c7",
+    "price_history.csv": "671a127858a78e7b5185003b75c030cb8a003b1a8310289d491a78bf697ae0db",
+    "products.csv": "007c4d397408e02ac0556e40e440c000ffb1002d62afdca5ac9eae6e3d0d3606",
+    "promotion_applications.csv": "c671de23482ced4c9a2133e83d0c0e33b4f4389f51a9612df611ba89078e2160",
+    "promotion_products.csv": "e980c0c0233044c39f93f48930abc93ed0af1f03a68b2bb8de0b62fc826bbc9f",
+    "promotion_rules.csv": "ce93fa01794493b352cf9151af45065e1e57940296c33534325b7412e8d8903b",
+    "promotions.csv": "266b35774e456a796a4a63053658747d6060ceeeeb8b891082294327f1dc6b7a",
+    "run_manifest.json": "84392dd5e3478bd954e2c71452fa09fc3b2a4b70349a3b9a51bb6f19337144f6"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "seed": 20261022,
+  "products": 100,
+  "days": 30,
+  "promotions": 50,
+  "files": [
+    {
+      "file": "products.csv",
+      "rows": 100,
+      "sha256": "1de315902ab7fdc733ca537f148ff85ba5008a985aebbeb3a4613a43d9ab221e"
+    },
+    {
+      "file": "cost_records.csv",
+      "rows": 109,
+      "sha256": "93ba056314a70dbfb9280dcd98622d0af2ba9ec6c1a718107548824219d8556d"
+    },
+    {
+      "file": "price_history.csv",
+      "rows": 3000,
+      "sha256": "611e81bb608e0b0b7399006a4ba6cb97d131915fe251328afbd044be6d434ce7"
+    },
+    {
+      "file": "competitor_observations.csv",
+      "rows": 3000,
+      "sha256": "20e420b95191f3410ee4964f8b8e3814970aac64f6b28ec665ec4964fa74cd36"
+    },
+    {
+      "file": "inventory_snapshots.csv",
+      "rows": 3000,
+      "sha256": "0e9dece547adb8d3fe3dc0029e9d7756a3aec805ce6e81069ab0247e0a40b703"
+    },
+    {
+      "file": "promotions.csv",
+      "rows": 50,
+      "sha256": "39d7a8aa84791ee1d40d90ff69cd9e2cbfc3977809e474f50baf166c70ac9b96"
+    },
+    {
+      "file": "promotion_rules.csv",
+      "rows": 64,
+      "sha256": "af3e2306f01bede9477fe30c28bf1f762ae142fcc2fb6c154a1ea0f97a728513"
+    },
+    {
+      "file": "promotion_products.csv",
+      "rows": 50,
+      "sha256": "a7af58959e85f4d760d3a63224fdc3f380d560d6c65bcc078ed383383f397edc"
+    },
+    {
+      "file": "orders.csv",
+      "rows": 325,
+      "sha256": "f4b94e94ebddb3ae22e6902f4e0b448fa87d10fbf62a10a8277b3d203b292246"
+    },
+    {
+      "file": "price_decisions.csv",
+      "rows": 3000,
+      "sha256": "aae551d390e1f8ed83002d607b32af6ef76b2e2d6be5bad7ee85c73d9573eb83"
+    },
+    {
+      "file": "promotion_applications.csv",
+      "rows": 0,
+      "sha256": "c671de23482ced4c9a2133e83d0c0e33b4f4389f51a9612df611ba89078e2160"
+    },
+    {
+      "file": "audit_events.csv",
+      "rows": 259,
+      "sha256": "f8c1e55dbaca8816b8723d76503362e806203b90835ae8d2b4b6377bbd507d62"
+    },
+    {
+      "file": "edge_case_inputs.csv",
+      "rows": 5,
+      "sha256": "1a4d00023f52c7f68c7cba623ef2c079e5b22359d46f8ad6b6fde2bb52206438"
+    },
+    {
+      "file": "ground_truth.json",
+      "rows": 5,
+      "sha256": "11e6c8c72d76c01f6d82427ba2a12bba87590498e6f09d86fa1894fde15ee9fa",
+      "role": "evaluation_only_not_engine_input"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "format": "JSON Lines (one JSON object per line)",
+  "files": [
+    {
+      "file": "products.jsonl",
+      "rows": 100,
+      "sha256": "f2b258e0b6774c87b2c629315162fac7bb930c0e332d011fa592efd3a99a1cd2"
+    },
+    {
+      "file": "cost_records.jsonl",
+      "rows": 109,
+      "sha256": "8d99c03280e1ac9695b05b653e59f59f0e3611c8f8f2227fee8fc8fd952b60b4"
+    },
+    {
+      "file": "price_history.jsonl",
+      "rows": 3000,
+      "sha256": "6639ea19079d0f53614e2d237c86d65032aedf3f925c87bb3afb2076eba33348"
+    },
+    {
+      "file": "competitor_observations.jsonl",
+      "rows": 3000,
+      "sha256": "f7581daba3743fff4e98bf63351c69e9969225322494b90f0616508298651e2a"
+    },
+    {
+      "file": "inventory_snapshots.jsonl",
+      "rows": 3000,
+      "sha256": "346d1d06cd4dd66bd94393f70570ceb945f9321d41da58d10dec0ac2971705b3"
+    },
+    {
+      "file": "promotions.jsonl",
+      "rows": 50,
+      "sha256": "622705cae8d68ae925ac52c378207b6d2950455960da62e19d3b3a81418321ce"
+    },
+    {
+      "file": "promotion_rules.jsonl",
+      "rows": 64,
+      "sha256": "4bc3b13812ed9ef345027455113c8ea74f8a3de0b518f6208c157bf2b9a290c5"
+    },
+    {
+      "file": "promotion_products.jsonl",
+      "rows": 50,
+      "sha256": "86c69ff7dc796c16b105b62a0394f41be050d802c83b387045d7d8e4ade5e0bb"
+    },
+    {
+      "file": "orders.jsonl",
+      "rows": 325,
+      "sha256": "386b03f0e9f4145b03d2498f20130b971882d217e858589d304ea81efdde537c"
+    },
+    {
+      "file": "price_decisions.jsonl",
+      "rows": 3000,
+      "sha256": "40cbb00b710544df6da62a030ef55eaa4267d538255a3c2f5dda6fdb8a2c2d05"
+    },
+    {
+      "file": "promotion_applications.jsonl",
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "audit_events.jsonl",
+      "rows": 259,
+      "sha256": "73dddd36412fb7747bf43df8777310a26905bf106f60c65804fd1774dc9241ff"
+    },
+    {
+      "file": "edge_case_inputs.jsonl",
+      "rows": 5,
+      "sha256": "3b5a1c4c3862be65e9c6f8012022eb4e1484a65691bb5004d93d8980ff8c903a"
+    }
+  ]
+}

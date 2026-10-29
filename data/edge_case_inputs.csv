@@ -1,0 +1,6 @@
+case_id,cost,candidate_price,min_margin_pct,price_floor,price_ceiling,discount_pct,competitor_price,competitor_age_hours,stock_on_hand,reason,promotion_ids,stack_allowed
+EDGE-000001,100.0,90.0,20.0,125.0,300.0,0.0,110.0,2,10,TEST_PRICE_FLOOR,[],False
+EDGE-000002,100.0,160.0,20.0,125.0,300.0,0.0,155.0,2,10,TEST_STACKING,"[""PROMO-2026-000001"", ""PROMO-2026-000002""]",False
+EDGE-000003,100.0,160.0,20.0,125.0,300.0,0.0,155.0,72,10,TEST_STALE_COMPETITOR,[],False
+EDGE-000004,100.0,160.0,20.0,110.0,300.0,25.0,130.0,2,10,TEST_POST_DISCOUNT_MARGIN,[],False
+EDGE-000005,100.0,160.0,20.0,125.0,300.0,0.0,155.0,2,10,,[],False

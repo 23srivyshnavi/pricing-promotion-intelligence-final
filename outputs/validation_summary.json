@@ -1,0 +1,305 @@
+{
+  "checks": [
+    {
+      "name": "columns:products.csv",
+      "passed": true,
+      "detail": "Required columns: ['sku', 'price_floor', 'price_ceiling', 'min_margin_pct', 'status']"
+    },
+    {
+      "name": "columns:cost_records.csv",
+      "passed": true,
+      "detail": "Required columns: ['cost_id', 'sku', 'unit_cost', 'effective_from', 'effective_to']"
+    },
+    {
+      "name": "columns:price_history.csv",
+      "passed": true,
+      "detail": "Required columns: ['price_id', 'sku', 'selling_price', 'effective_at']"
+    },
+    {
+      "name": "columns:competitor_observations.csv",
+      "passed": true,
+      "detail": "Required columns: ['observation_id', 'sku', 'competitor_price', 'source_timestamp', 'retrieved_at']"
+    },
+    {
+      "name": "columns:inventory_snapshots.csv",
+      "passed": true,
+      "detail": "Required columns: ['snapshot_id', 'sku', 'snapshot_date', 'stock_on_hand', 'reserved_units', 'demand_units', 'stockout']"
+    },
+    {
+      "name": "columns:promotions.csv",
+      "passed": true,
+      "detail": "Required columns: ['promotion_id', 'promotion_type', 'discount_value', 'starts_at', 'ends_at', 'status']"
+    },
+    {
+      "name": "columns:promotion_rules.csv",
+      "passed": true,
+      "detail": "Required columns: ['rule_id', 'promotion_id', 'rule_type', 'rule_value']"
+    },
+    {
+      "name": "columns:promotion_products.csv",
+      "passed": true,
+      "detail": "Required columns: ['promotion_id', 'sku']"
+    },
+    {
+      "name": "columns:orders.csv",
+      "passed": true,
+      "detail": "Required columns: ['order_id', 'sku', 'quantity', 'unit_price', 'discount_amount', 'order_total']"
+    },
+    {
+      "name": "columns:price_decisions.csv",
+      "passed": true,
+      "detail": "Required columns: ['decision_id', 'sku', 'cost_id', 'price_id', 'observation_id', 'snapshot_id', 'candidate_price', 'decision_status']"
+    },
+    {
+      "name": "columns:audit_events.csv",
+      "passed": true,
+      "detail": "Required columns: ['event_id', 'entity_type', 'entity_id', 'event_type', 'reason', 'event_timestamp', 'actor']"
+    },
+    {
+      "name": "products_sku_unique",
+      "passed": true,
+      "detail": "Product SKU must be unique"
+    },
+    {
+      "name": "product_price_bounds",
+      "passed": true,
+      "detail": "Floors, ceilings and margins must be in valid ranges"
+    },
+    {
+      "name": "product_status_enum",
+      "passed": true,
+      "detail": "Product status must be an allowed enum"
+    },
+    {
+      "name": "pk_unique:cost_id",
+      "passed": true,
+      "detail": "cost_id must be unique"
+    },
+    {
+      "name": "pk_unique:price_id",
+      "passed": true,
+      "detail": "price_id must be unique"
+    },
+    {
+      "name": "pk_unique:observation_id",
+      "passed": true,
+      "detail": "observation_id must be unique"
+    },
+    {
+      "name": "pk_unique:snapshot_id",
+      "passed": true,
+      "detail": "snapshot_id must be unique"
+    },
+    {
+      "name": "pk_unique:promotion_id",
+      "passed": true,
+      "detail": "promotion_id must be unique"
+    },
+    {
+      "name": "pk_unique:rule_id",
+      "passed": true,
+      "detail": "rule_id must be unique"
+    },
+    {
+      "name": "pk_unique:order_id",
+      "passed": true,
+      "detail": "order_id must be unique"
+    },
+    {
+      "name": "pk_unique:decision_id",
+      "passed": true,
+      "detail": "decision_id must be unique"
+    },
+    {
+      "name": "fk_sku:cost_records.csv",
+      "passed": true,
+      "detail": "Every child SKU must reference an existing product"
+    },
+    {
+      "name": "fk_sku:price_history.csv",
+      "passed": true,
+      "detail": "Every child SKU must reference an existing product"
+    },
+    {
+      "name": "fk_sku:competitor_observations.csv",
+      "passed": true,
+      "detail": "Every child SKU must reference an existing product"
+    },
+    {
+      "name": "fk_sku:inventory_snapshots.csv",
+      "passed": true,
+      "detail": "Every child SKU must reference an existing product"
+    },
+    {
+      "name": "fk_sku:orders.csv",
+      "passed": true,
+      "detail": "Every child SKU must reference an existing product"
+    },
+    {
+      "name": "fk_sku:price_decisions.csv",
+      "passed": true,
+      "detail": "Every child SKU must reference an existing product"
+    },
+    {
+      "name": "fk_sku:promotion_products.csv",
+      "passed": true,
+      "detail": "Every child SKU must reference an existing product"
+    },
+    {
+      "name": "cost_nonnegative",
+      "passed": true,
+      "detail": "Unit cost must be nonnegative"
+    },
+    {
+      "name": "cost_dates_valid",
+      "passed": true,
+      "detail": "Cost date ranges must be valid"
+    },
+    {
+      "name": "cost_effective_ranges_no_overlap",
+      "passed": true,
+      "detail": "Cost effective ranges for the same SKU must not overlap"
+    },
+    {
+      "name": "price_nonnegative",
+      "passed": true,
+      "detail": "Selling prices must be nonnegative"
+    },
+    {
+      "name": "price_ids_date_consistent",
+      "passed": true,
+      "detail": "Price history IDs must follow PRC-SKU-000001-YYYYMMDD"
+    },
+    {
+      "name": "competitor_price_nonnegative",
+      "passed": true,
+      "detail": "Competitor prices must be nonnegative"
+    },
+    {
+      "name": "competitor_timestamps_valid",
+      "passed": true,
+      "detail": "Retrieved timestamp must not precede source timestamp"
+    },
+    {
+      "name": "inventory_nonnegative",
+      "passed": true,
+      "detail": "Inventory quantities cannot be negative"
+    },
+    {
+      "name": "inventory_product_date_unique",
+      "passed": true,
+      "detail": "One snapshot per SKU/date"
+    },
+    {
+      "name": "stockout_derived",
+      "passed": true,
+      "detail": "Stockout label must derive from available stock"
+    },
+    {
+      "name": "promotion_type_enum",
+      "passed": true,
+      "detail": "Promotion type enum"
+    },
+    {
+      "name": "promotion_status_enum",
+      "passed": true,
+      "detail": "Promotion status enum"
+    },
+    {
+      "name": "promotion_dates_valid",
+      "passed": true,
+      "detail": "Promotion end must not precede start"
+    },
+    {
+      "name": "promotion_lifecycle_consistent",
+      "passed": true,
+      "detail": "Promotion status must be consistent as of the synthetic reference date"
+    },
+    {
+      "name": "fk_promotion_rules",
+      "passed": true,
+      "detail": "Every rule references an existing promotion"
+    },
+    {
+      "name": "promotion_rule_enum",
+      "passed": true,
+      "detail": "Rule type must be an allowed enum"
+    },
+    {
+      "name": "promotion_exclusions_reference_existing_ids",
+      "passed": true,
+      "detail": "Exclusion rules must reference existing promotions"
+    },
+    {
+      "name": "fk_promotion_products",
+      "passed": true,
+      "detail": "Promotion-product bridge must reference existing promotions"
+    },
+    {
+      "name": "order_totals_reconcile",
+      "passed": true,
+      "detail": "Order totals must reconcile"
+    },
+    {
+      "name": "order_quantities_valid",
+      "passed": true,
+      "detail": "Order quantity must be positive"
+    },
+    {
+      "name": "audit_event_id_unique",
+      "passed": true,
+      "detail": "Audit event IDs must be unique"
+    },
+    {
+      "name": "audit_event_required_fields",
+      "passed": true,
+      "detail": "Audit event identity and reason fields are required"
+    },
+    {
+      "name": "audit_state_json_valid",
+      "passed": true,
+      "detail": "Audit old_state/new_state must contain valid JSON when present"
+    },
+    {
+      "name": "fk_decisions_cost_id",
+      "passed": true,
+      "detail": "Every decision cost_id must exist"
+    },
+    {
+      "name": "fk_decisions_price_id",
+      "passed": true,
+      "detail": "Every decision price_id must exist"
+    },
+    {
+      "name": "fk_decisions_observation_id",
+      "passed": true,
+      "detail": "Every decision observation_id must exist"
+    },
+    {
+      "name": "fk_decisions_snapshot_id",
+      "passed": true,
+      "detail": "Every decision snapshot_id must exist"
+    },
+    {
+      "name": "decision_status_enum",
+      "passed": true,
+      "detail": "Decision status enum"
+    },
+    {
+      "name": "approved_has_final_price",
+      "passed": true,
+      "detail": "Approved decisions must have a final price"
+    },
+    {
+      "name": "rejected_not_finalized",
+      "passed": true,
+      "detail": "Rejected/review decisions must not finalize a price"
+    }
+  ],
+  "errors": [],
+  "summary": {
+    "files_checked": 11,
+    "checks_passed": 59,
+    "checks_failed": 0
+  }
+}

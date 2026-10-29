@@ -1,0 +1,53 @@
+{
+  "total_cases": 5,
+  "passed": 5,
+  "failed": 0,
+  "accuracy": 1.0,
+  "results": [
+    {
+      "case_id": "EDGE-000001",
+      "expected_status": "REJECTED",
+      "actual_status": "REJECTED",
+      "issue_type": "PRICE_BELOW_FLOOR",
+      "passed": true,
+      "reason_code": "PRICE_BELOW_FLOOR",
+      "explanation": "Candidate price 90.00 is below floor 125.00."
+    },
+    {
+      "case_id": "EDGE-000002",
+      "expected_status": "REJECTED",
+      "actual_status": "REJECTED",
+      "issue_type": "PROMOTION_STACK_VIOLATION",
+      "passed": true,
+      "reason_code": "PROMOTION_STACK_VIOLATION",
+      "explanation": "Multiple promotions selected but stacking is prohibited."
+    },
+    {
+      "case_id": "EDGE-000003",
+      "expected_status": "REVIEW_REQUIRED",
+      "actual_status": "REVIEW_REQUIRED",
+      "issue_type": "STALE_COMPETITOR_OBSERVATION",
+      "passed": true,
+      "reason_code": "STALE_COMPETITOR_OBSERVATION",
+      "explanation": "Competitor observation is 72.0 hours old; threshold is 24.0 hours."
+    },
+    {
+      "case_id": "EDGE-000004",
+      "expected_status": "REJECTED",
+      "actual_status": "REJECTED",
+      "issue_type": "MARGIN_AFTER_DISCOUNT_VIOLATION",
+      "passed": true,
+      "reason_code": "MARGIN_AFTER_DISCOUNT_BELOW_MINIMUM",
+      "explanation": "Post-discount margin 16.67% is below required 20.00%."
+    },
+    {
+      "case_id": "EDGE-000005",
+      "expected_status": "REJECTED",
+      "actual_status": "REJECTED",
+      "issue_type": "MISSING_PRICE_CHANGE_REASON",
+      "passed": true,
+      "reason_code": "MISSING_PRICE_CHANGE_REASON",
+      "explanation": "Price change reason is required."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing & Promotion Intelligence</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header><div><p class="eyebrow">YottaFlex.ai · Round 2 Code Challenge</p><h1>Pricing & Promotion Intelligence</h1><p class="subtitle">Explainable pricing decisions, promotion guardrails and data quality.</p></div><span class="pill">Synthetic data demo</span></header>
+  <main>
+    <section class="cards">
+      <article class="metric"><span>Database status</span><strong id="db-status">Checking…</strong></article>
+      <article class="metric"><span>Products in MySQL</span><strong id="product-count">—</strong></article>
+      <article class="metric"><span>Promotions in MySQL</span><strong id="promotion-count">—</strong></article>
+      <article class="metric"><span>Price decisions</span><strong id="decision-count">—</strong><small id="decision-summary">Waiting for data</small></article>
+    </section>
+    <section class="panel"><div class="section-heading"><div><h2>Price simulation</h2><p>Evaluate a candidate price using explicit business rules.</p></div></div>
+      <form id="simulation-form" class="form-grid">
+        <label>Unit cost (₹)<input name="cost" type="number" min="0" step="0.01" value="700" required></label>
+        <label>Candidate price (₹)<input name="candidate_price" type="number" min="0" step="0.01" value="1199" required></label>
+        <label>Minimum margin (%)<input name="min_margin_pct" type="number" min="0" max="99.99" step="0.1" value="20" required></label>
+        <label>Price floor (₹)<input name="price_floor" type="number" min="0" step="0.01" value="875" required></label>
+        <label>Price ceiling (₹)<input name="price_ceiling" type="number" min="0" step="0.01" value="1600" required></label>
+        <label>Discount (%)<input name="discount_pct" type="number" min="0" max="100" step="0.1" value="0"></label>
+        <label>Competitor price (₹)<input name="competitor_price" type="number" min="0" step="0.01" value="1099"></label>
+        <label>Competitor data age (hours)<input name="competitor_age_hours" type="number" min="0" step="1" value="4"></label>
+        <label>Available stock<input name="stock_on_hand" type="number" min="0" step="1" value="8"></label>
+        <label>Product SKU (required for promotions)<input name="sku" type="text" placeholder="SKU-000001"></label>
+        <label>Promotion IDs (comma separated)<input name="promotion_ids" type="text" placeholder="PROMO-2026-000001"></label>
+        <label>Promotion evaluation time<input name="evaluation_at" type="datetime-local" value="2026-03-01T12:00"></label>
+        <label class="full">Price-change reason<input name="reason" type="text" value="COMPETITOR_REVIEW" required></label>
+        <label class="check"><input name="stack_allowed" type="checkbox"> Promotion stacking is allowed</label>
+        <div class="full"><button type="submit">Evaluate candidate</button></div>
+      </form>
+      <div id="simulation-result" class="result hidden" aria-live="polite"></div>
+    </section>
+    <section class="panel"><div class="section-heading"><div><h2>Product lookup</h2><p>Search product master data stored in MySQL.</p></div></div>
+      <form id="product-search" class="search-row"><input id="search-term" type="search" placeholder="Search SKU or product name"><button type="submit" class="secondary">Search</button></form>
+      <div class="table-wrap"><table><thead><tr><th>SKU</th><th>Product</th><th>Category</th><th>Floor</th><th>Ceiling</th><th>Min margin</th></tr></thead><tbody id="product-rows"><tr><td colspan="6">Load the database and search for products.</td></tr></tbody></table></div>
+    </section>
+    <section class="panel"><div class="section-heading"><div><h2>Recent exceptions</h2><p>Rejected or review-required decisions with their recorded reasons.</p></div><button id="refresh-exceptions" class="secondary" type="button">Refresh</button></div>
+      <div class="table-wrap"><table><thead><tr><th>Decision ID</th><th>SKU</th><th>Status</th><th>Reason</th><th>Candidate price</th><th>Explanation</th></tr></thead><tbody id="exception-rows"><tr><td colspan="6">Load data into MySQL to view exceptions.</td></tr></tbody></table></div>
+    </section>
+  </main>
+  <footer>All sample data is synthetic. No external competitor data is collected.</footer>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body></html>

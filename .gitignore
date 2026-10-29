@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+database/seed.sql
+database/database_dump.sql
+data/*.csv
+!data/edge_case_inputs.csv
+data/json/
